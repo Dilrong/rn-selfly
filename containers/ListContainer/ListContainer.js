@@ -5,6 +5,10 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { CardView, StatusBar, Header } from '../../components';
 
 export default class ListContainer extends React.Component {
+  static navigationOptions = {
+    header: null,
+  }
+
   state = {
     data: [],
     isLoading: false

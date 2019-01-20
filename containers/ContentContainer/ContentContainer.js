@@ -5,6 +5,10 @@ import HTML from 'react-native-render-html';
 const htmlContent=`<h1>Helloworld!</h1>`;
 
 export default class ContentContainer extends React.Component {
+    static navigationOptions = {
+        header: null,
+      }
+
     render() {
         return (
             <ScrollView style={{flex: 1}}>
