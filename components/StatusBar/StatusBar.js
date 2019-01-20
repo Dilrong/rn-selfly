@@ -6,7 +6,7 @@ export default function(props) {
     const { backgroundColor } = props;
 
     return (
-        <View style={{ height, backgroundColor}}>
+        <View style={{ height, backgroundColor, marginTop: StatusBar.currentHeight}}>
             <StatusBar {...props}/>
         </View>
     );
