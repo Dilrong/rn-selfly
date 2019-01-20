@@ -1,22 +1,22 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-const CardView = () => (
+const CardView = ({data}) => (
     <View style={styles.container}>
-        <Text style={styles.CardCategory}>testCategory</Text>
-        <Text style={styles.CardTitle}>testTitle</Text>
-        <Text style={styles.CardContent}>testContent</Text>
+        <Text style={styles.CardCategory}>{data.postCategory}</Text>
+        <Text style={styles.CardTitle}>{data.postTitle}</Text>
+        <Text style={styles.CardContent}>{data.postSubTitle}</Text>
     </View>
 )
 
 const styles = StyleSheet.create({
     container: {
         elevation: 5,
-        borderRadius: 4,
+        borderRadius: 7,
         borderWidth: 0.5,
         borderColor: '#fff',
         backgroundColor: '#fff',
-        width: '90%',
+        width: 350,
         margin: 8,
         elevation: 5
     },
@@ -24,18 +24,20 @@ const styles = StyleSheet.create({
         width: '100%',
         fontSize: 10,
         color: '#7f8c8d',
-        padding: 5
+        paddingTop: 10,
+        paddingLeft: 10
     },
     CardTitle: {
         width: '100%',
         fontWeight: 'bold',
         fontSize: 20,
-        padding: 5
+        padding: 10
     },
     CardContent: {
         width: '100%',
         fontSize: 12,
-        padding: 5
+        paddingLeft: 10,
+        paddingBottom: 10
     },
 });
 
