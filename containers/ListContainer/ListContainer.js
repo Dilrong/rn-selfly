@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
 import axios from 'react-native-axios';
-import { CardView } from '../../components';
+import { StyleSheet, View, ScrollView, TouchableHighlight } from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { CardView, StatusBar, Header } from '../../components';
 
 export default class ListContainer extends React.Component {
   state = {
@@ -28,18 +29,25 @@ export default class ListContainer extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar backgroundColor='#F9CA24' barStyle='dark-content'/>
+        <Header/>
         <ScrollView>
           {this.state.data.map((data, index) => (
-            <CardView
+            <TouchableHighlight
               key={index}
-              data={data}
-            />
+              onPress={() => this.props.navigation.navigate('Content')}
+            >
+              <CardView
+                key={index}
+                data={data}
+              />
+            </TouchableHighlight>
           ))}
         </ScrollView>
       </View>
     );
   }
-}
+};
 
 const styles = StyleSheet.create({
   container: {

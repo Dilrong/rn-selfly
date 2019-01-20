@@ -10,7 +10,7 @@ const Header = () => (
 
 const styles = StyleSheet.create({
     container: {
-        flex: 0.07,
+        flex: 0.1,
         flexDirection: 'row',
         elevation: 5,
         backgroundColor: '#F9CA24',

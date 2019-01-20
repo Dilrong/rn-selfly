@@ -2,7 +2,7 @@ import React from 'react';
 import { Dimensions, ScrollView } from 'react-native';
 import HTML from 'react-native-render-html';
 
-const htmlContent;
+const htmlContent=`<h1>Helloworld!</h1>`;
 
 export default class ContentContainer extends React.Component {
     render() {

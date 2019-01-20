@@ -5,7 +5,7 @@ const CardView = ({data}) => (
     <View style={styles.container}>
         <Text style={styles.CardCategory}>{data.postCategory}</Text>
         <Text style={styles.CardTitle}>{data.postTitle}</Text>
-        <Text style={styles.CardContent}>{data.postContent}</Text>
+        <Text style={styles.CardContent}>{data.postSubTitle}</Text>
     </View>
 )
 
